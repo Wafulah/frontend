@@ -8,6 +8,7 @@ import HeadImage from "../assets/amir.png";
 import BritamImage from "../assets/britam.png";
 import DahabImage from "../assets/dahabshiil.png";
 import GuardImage from "../assets/cigna.png";
+import LogoImage from "../assets/HandyLogo.png";
 import BusinessImage from "../assets/bussiness_times.png";
 
 const Home = () => {
@@ -15,11 +16,16 @@ const Home = () => {
     <div className="home">
       <div className="holder">
         <nav className="navi flex ">
-          <div className="name float-left w-1/4">
-            <h3 className="text-white text-left px-2.5 py-2.5 font-semibold">
-              Handy Creations
-            </h3>
-          </div>
+        <div className="mt-4 name flex float-left  h-6 w-1/3">
+              <img
+                src={LogoImage}
+                alt="Business Times"
+                className="logo_image"
+              />
+              <h3 className="text-white text-left px-0.5 py-0.5 font-semibold">
+                Handy Creations
+              </h3>
+            </div>
 
           <div className="name float-right flex flex-row justify-end w-3/4">
             <p className=" font-semibold opacity-75 text-white px-6 py-2.5">
