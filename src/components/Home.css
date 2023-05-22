@@ -1,0 +1,69 @@
+.navi {
+  height: 60px;
+  /* background-color: rgba(0, 0, 0, 0.397); */
+  display: flex;
+}
+.name {
+  text-align: left;
+  float: left;
+}
+.home {
+  width: 100vw;
+  height: 3200px;
+  
+  margin: auto;
+  background-color: rgba(12, 1, 1, 0.122);
+  backdrop-filter: blur(200px);
+}
+home::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+.holder {
+  width: 80vw;
+  height: 100vh;
+  margin: auto;
+}
+
+.float_right {
+  float: right;
+  /* background-color: blue; */
+}
+.child {
+  position: absolute;
+  top: 140px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+.lucid_font {
+  font-family: "Lucida Bright", sans-serif;
+}
+.brush_font {
+  font-family: "Brush Script", cursive;
+}
+.mon_font {
+  font-family: "Monaco", monospace;
+}
+.opt_font {
+  font-family: "Optima", sans-serif;
+}
+.extra {
+  height: 70px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+.logos_div {
+  width: 23%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: white;
+  /* box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.548); */
+  /* justify-content: center;
+  align-items: center; */
+}

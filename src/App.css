@@ -1,0 +1,16 @@
+/* body {
+  background-image: linear-gradient(rgb(44, 2, 2), red, red, rgb(44, 2, 2));
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+.cont {
+  background-image: linear-gradient(rgb(44, 2, 2), red, red, rgb(44, 2, 2));
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 3200px;
+}
+
+cont::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}

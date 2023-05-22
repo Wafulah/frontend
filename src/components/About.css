@@ -1,0 +1,17 @@
+.lucid_font {
+  font-family: "Lucida Bright", sans-serif;
+}
+.brush_font {
+  font-family: "Brush Script", cursive;
+}
+.mon_font {
+  font-family: "Monaco", monospace;
+}
+.opt_font {
+  font-family: "Optima", sans-serif;
+}
+.img_div {
+  height: 400px;
+  margin: auto 15% auto auto;
+  width: 30%;
+}
