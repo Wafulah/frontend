@@ -9,70 +9,66 @@
   height: 100%;
   border-radius: 25px;
   background-color: white;
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.548);
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.459);
   justify-content: center;
   align-items: center;
-
 }
 .d_color {
-    background-color: rgb(161, 4, 4);
+  background-color: rgb(161, 4, 4);
 }
 .icn {
-    width:fit-content;
-    /* margin: 10% auto; */
-
+  width: fit-content;
+  /* margin: 10% auto; */
 }
 .hdn {
-    /* background-color: blue; */
-    text-align: center;
+  /* background-color: blue; */
+  text-align: center;
 }
 .flip-horizontal {
-    transform: scaleX(-1); /* Flip the icon horizontally */
-  }
+  transform: scaleX(-1); /* Flip the icon horizontally */
+}
 
 .footer_div {
-    /* background-color: blue; */
-    height: 300px;
-    width: 88%;
-    margin: 3% auto;
+  /* background-color: blue; */
+  height: 300px;
+  width: 88%;
+  margin: 3% auto;
 }
 
 /* scrollbar CSS */
 .custom-scrollbar .simplebar-scrollbar {
-    background-color: blue;
-    width: 6px;
-  }
-  
-  .custom-scrollbar .simplebar-scrollbar:before {
-    background-color: blue;
-  }
-  
-  .custom-scrollbar .simplebar-track {
-    width: 6px;
-    background-color: transparent;
-  }
-  
-  .custom-scrollbar .simplebar-scrollbar.simplebar-visible:before {
-    opacity: 1;
-  }
+  background-color: blue;
+  width: 6px;
+}
 
-  /* CSS */
+.custom-scrollbar .simplebar-scrollbar:before {
+  background-color: blue;
+}
+
+.custom-scrollbar .simplebar-track {
+  width: 6px;
+  background-color: transparent;
+}
+
+.custom-scrollbar .simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1;
+}
+
+/* CSS */
 textarea.custom-scrollbar::-webkit-scrollbar {
-    width: 6px;
-  }
-  
-  textarea.custom-scrollbar::-webkit-scrollbar-track {
-    background-color: transparent;
-    
-  }
-  
-  textarea.custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: white;
-    height: 0.5px;
-  }
-  
-  textarea.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background-color: white;
-    height: 1px;
-  }
-  
+  width: 6px;
+}
+
+textarea.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+textarea.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: white;
+  height: 0.5px;
+}
+
+textarea.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: white;
+  height: 1px;
+}

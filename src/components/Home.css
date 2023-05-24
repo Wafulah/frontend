@@ -9,7 +9,7 @@
 }
 .home {
   width: 100vw;
-  height: 3200px;
+  height: 3750px;
 
   margin: auto;
   background-color: rgba(12, 1, 1, 0.122);
@@ -23,6 +23,7 @@ home::-webkit-scrollbar {
   width: 80vw;
   height: 100vh;
   margin: auto;
+  
 }
 
 .float_right {
@@ -67,8 +68,13 @@ home::-webkit-scrollbar {
   width: 23%;
   height: 100%;
   border-radius: 10px;
-  background-color: white;
+  
+  /* background-color: rgb(255, 238, 238); */
   /* box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.548); */
   /* justify-content: center;
   align-items: center; */
+}
+.scrollable_div {
+  width: 100%;
+  overflow: auto;
 }

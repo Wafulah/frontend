@@ -12,7 +12,7 @@ html {
   @apply xl:text-[7rem] text-[3rem] xl:leading-[8rem] leading-[4rem] font-black text-white;
 }
 .small-head-text {
-  @apply xl:text-[4rem] text-[4rem] xl:leading-[1rem] leading-[3rem] font-medium text-white;
+  @apply xl:text-[4rem] text-[4rem] xl:leading-[1rem] leading-[3rem] font-medium ;
 }
 .smaller-head-text {
   @apply xl:text-[2rem] text-[2rem] xl:leading-[1rem] leading-[2rem] font-medium text-white;

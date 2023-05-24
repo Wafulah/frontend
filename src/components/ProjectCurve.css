@@ -1,0 +1,6 @@
+.up_curve {
+    background-color: rgb(255, 238, 238);
+    height: 200px;
+    border-top-right-radius: 30%;
+    border-top-left-radius: 90%;
+}

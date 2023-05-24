@@ -15,3 +15,21 @@
   margin: auto 15% auto auto;
   width: 30%;
 }
+.curved_div {
+  
+  border-bottom-right-radius: 30%;
+  border-bottom-left-radius: 70%;
+  height: 700px;
+  background-color: rgb(255, 238, 238);
+}
+.text_grey {
+  color: rgba(43, 31, 31, 0.459);
+}
+.about_info_div {
+  background-color: white;
+  height: 55%;
+  width: 30%;
+  border-radius: 30px;
+  box-shadow: 2px 2px 30px rgba(43, 1, 1, 0.151);
+}
+

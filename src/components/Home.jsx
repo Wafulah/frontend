@@ -3,13 +3,17 @@ import About from "./About";
 import Services from "./Services";
 import Projects from "./Projects";
 import Contact from "./Contact";
-
+import Curve from "./Curve";
+import ProjectCurve from "./ProjectCurve";
+// import { motion } from "framer-motion";
 import HeadImage from "../assets/amir.png";
-import BritamImage from "../assets/britam.png";
-import DahabImage from "../assets/dahabshiil.png";
-import GuardImage from "../assets/cigna.png";
+// import BritamImage from "../assets/britam.png";
+// import DahabImage from "../assets/dahabshiil.png";
+// import GuardImage from "../assets/cigna.png";
 import LogoImage from "../assets/HandyLogo.png";
-import BusinessImage from "../assets/bussiness_times.png";
+// import TiImage from "../assets/Ti.png";
+// import BusinessImage from "../assets/bussiness_times.png";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import "animate.css";
 
@@ -26,22 +30,70 @@ const Home = () => {
           </div>
 
           <div className="name float-right flex flex-row justify-end w-3/4">
-            <p className=" font-semibold opacity-75 text-white px-6 py-2.5">
-              Home
+            <p className="cursor-pointer hover:bg-red-700 font-semibold opacity-75 text-white px-6 py-2.5">
+              <Link
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Home
+              </Link>
             </p>
-            <p className=" font-semibold opacity-75 text-white px-6 py-2.5">
-              Service
+            <p className="cursor-pointer hover:bg-red-700 font-semibold opacity-75 text-white px-6 py-2.5">
+              <Link
+                activeClass="active"
+                to="services"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Service
+              </Link>
             </p>
-            <p className="font-semibold opacity-75 text-white  px-6 py-2.5">
-              About Us
+            <p className="cursor-pointer hover:bg-red-700 font-semibold opacity-75 text-white px-6 py-2.5">
+              <Link
+                activeClass="active"
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={900}
+              >
+                Projects
+              </Link>
             </p>
-            <p className="font-semibold opacity-75 text-white px-6 py-2.5">
-              Contact
+            <p className="cursor-pointer hover:bg-red-700 font-semibold opacity-75 text-white  px-6 py-2.5">
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                About Us
+              </Link>
+            </p>
+            <p className="cursor-pointer hover:bg-red-700 font-semibold opacity-75 text-white px-6 py-2.5">
+              <Link
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={1000}
+              >
+                Contact
+              </Link>
             </p>
           </div>
         </nav>
         <div>
-          <div className="mt-10">
+          <div id="home" className="mt-10">
             <h2 className="animate__animated animate__bounceIn text-center head-text">
               We Build Brands
             </h2>
@@ -93,33 +145,30 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-row justify-between h-20">
-            <div className="logos_div">
-              <img src={BritamImage} alt="Britam" className="image" />
-            </div>
-
-            <div className="logos_div">
-              <img src={DahabImage} alt="Dahabshiil" className="image" />
-            </div>
-
-            <div className="logos_div">
-              <img src={GuardImage} alt="Guardian" className="image" />
-            </div>
-
-            <div className="logos_div">
-              <img src={BusinessImage} alt="Business Times" className="image" />
-            </div>
-          </div>
         </div>
-        <div className="extra"></div>
+      </div>
+      {/* end of holder div */}
+      <div className="extra"></div>
+      <div id="about">
+      <Curve />
 
-        <About />
+      <About  />
+      </div>
+      <div className="extra"></div>
+
+      <div id="services" className="holder">
+        <Services  />
         <div className="extra"></div>
-        <Services />
-        <div className="extra"></div>
-        <Projects />
-        <div className="extra"></div>
-        <Contact />
+      </div>
+      <div id="projects">
+      <ProjectCurve />
+      <Projects  />
+      </div>
+      <div className="extra"></div>
+      <div className="holder">
+        <div id="contact">
+        <Contact  />
+        </div>
       </div>
     </div>
   );

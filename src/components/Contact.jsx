@@ -194,7 +194,7 @@ const Contact = () => {
           </div>
         </div>
         <p className="text-white pt-3 opacity-30 text-center italic text-xs">
-          @handycreations 2023 all rights reserved
+          &copy; handycreations 2023.all rights reserved
         </p>
         {/* end of footer */}
       </div>
