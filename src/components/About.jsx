@@ -6,6 +6,12 @@ import ObImage from "../assets/objective.svg";
 
 import "animate.css";
 
+// import BritamImage from "../assets/britam.png";
+// import DahabImage from "../assets/dahabshiil.png";
+// import GuardImage from "../assets/cigna.png";
+// import TiImage from "../assets/Ti.png";
+// import BusinessImage from "../assets/bussiness_times.png";
+
 const About = () => {
   return (
     <div className="  curved_div ">

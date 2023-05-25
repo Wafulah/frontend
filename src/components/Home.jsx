@@ -5,6 +5,7 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import Curve from "./Curve";
 import ProjectCurve from "./ProjectCurve";
+import Products from "./Products";
 // import { motion } from "framer-motion";
 import HeadImage from "../assets/amir.png";
 // import BritamImage from "../assets/britam.png";
@@ -163,6 +164,9 @@ const Home = () => {
       <div id="projects">
       <ProjectCurve />
       <Projects  />
+      </div>
+      <div id="products">
+        <Products />
       </div>
       <div className="extra"></div>
       <div className="holder">

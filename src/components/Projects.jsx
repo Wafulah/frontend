@@ -17,7 +17,7 @@ import 'swiper/css/autoplay';
 const Projects = () => {
   return (
     <div className="project">
-    <div className="holder">
+    <div className="h-full holder">
     <div className=" flex justify-left">
         <p className="text-4xl text_grey font-bold ">View Our Projects</p>
       </div>

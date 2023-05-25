@@ -8,14 +8,14 @@
   float: left;
 }
 .home {
-  width: 100vw;
-  height: 3750px;
+  width: 100%;
+  height: 100%;
 
   margin: auto;
   background-color: rgba(12, 1, 1, 0.122);
   backdrop-filter: blur(200px);
 }
-home::-webkit-scrollbar {
+.home::-webkit-scrollbar {
   width: 0;
   background: transparent;
 }

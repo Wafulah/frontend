@@ -2,6 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import { FaKeycdn, FaTimes } from "react-icons/fa";
 import "./Services.css";
 
+
+import BritamImage from "../assets/britam.png";
+import DahabImage from "../assets/dahabshiil.png";
+import GuardImage from "../assets/cigna.png";
+import TiImage from "../assets/Ti.png";
+import BusinessImage from "../assets/bussiness_times.png";
+
 const Popup = ({ onClose }) => {
   const contentRef = useRef(null);
 
@@ -90,6 +97,38 @@ const Popup = ({ onClose }) => {
               Contact us today to discuss your design and branding needs. We
               look forward to working with you and helping your brand shine.
             </p>
+            <div >
+            <div className="flex justify-between">
+            <div className="about_logos1">
+            <img src={BritamImage} alt="Britam" className="w-full h-full bg-cover" />
+
+            </div>
+            <div className="about_logos1">
+            <img src={GuardImage} alt="Guardian" className="w-full h-full bg-cover" />
+
+            </div>
+            <div className="about_logos1">
+            <img src={DahabImage} alt="Dahabshiil" className="w-full h-full bg-cover" />
+
+            </div>
+
+
+            </div>
+            <div className="flex justify-center">
+            <div className="about_logos2">
+            <img src={TiImage} alt="Times International" className="w-full h-full bg-cover" />
+
+            </div>
+            <div className="about_logos2">
+            <img src={BusinessImage} alt="Bussiness International" className="w-full h-full bg-cover" />
+
+            </div>
+            
+
+
+            </div>
+            
+             </div>
             <div className="footer flex justify-center">
               <p className="lucid_font pb-5 italic text-sm opacity-50">
                 &copy; 2023handycreations. All Rights Reserved.

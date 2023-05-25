@@ -66,3 +66,15 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
   /* border-radius: 20px; */
 }
+.about_logos1 {
+  width: 20%;
+  height: 60px;
+  
+  margin: 3%;
+}
+.about_logos2 {
+  width: 30%;
+  height: 80px;
+  
+  margin: 3%;
+}

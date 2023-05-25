@@ -7,11 +7,18 @@
   background-image: linear-gradient(rgb(44, 2, 2), red, red, rgb(44, 2, 2));
   background-repeat: no-repeat;
   background-size: cover;
-  height: 3750px;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: thin; /* For Chrome and Safari */
+  scrollbar-color: transparent transparent;
 }
 
-cont::-webkit-scrollbar {
+.cont::-webkit-scrollbar {
   width: 0;
   background: transparent;
 }
+
+
