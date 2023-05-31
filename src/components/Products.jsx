@@ -14,35 +14,35 @@ const Products = () => {
             <div className="w-1/3 h-11/12 m-2  product_box">
               <div className="gifts pattern flex w-full h-full">
                 <div className="gifts_div  product_box  ">
-                  <p className="text-white text-center font-bold text-sm pt-5">
+                  <p className="text-white  font-bold text-sm pb-1 p-5">
                     Get Branded
                   </p>
                   <p className=" pl-5 opacity-75 text-white font-bold opt_font ">
-                    &#9733; Gift Bags
+                     Gift Bags
                   </p>
                   <p className="  pl-5 opacity-75 text-white font-bold opt_font ">
-                    &#9733; Wedding Cards
+                     Wedding Cards
                   </p>
                   <p className="pl-5 opacity-75 text-white font-bold opt_font ">
-                    &#9733; Books
+                     Books
                   </p>
                   <p className=" pl-5 opacity-75 text-white font-bold opt_font ">
-                    &#9733; Bussiness Card
+                     Bussiness Card
                   </p>
                   <p className="  pl-5 opacity-75 text-white font-bold opt_font ">
-                    &#9733; Flyers
+                     Flyers
                   </p>
                   <p className="  pl-5 opacity-75 text-white font-bold opt_font ">
-                    &#9733; Banners
+                     Banners
                   </p>
                   <p className="  pl-5 opacity-75 text-white font-bold opt_font ">
-                    &#9733; Shirts
+                     Shirts
                   </p>
                   <p className="  pl-5 opacity-75 text-white font-bold opt_font ">
-                    &#9733; Menus
+                     Menus
                   </p>
                   <p className="  pl-5 opacity-75 text-white font-bold opt_font ">
-                    &#9733; Magazines 
+                     Magazines 
                   </p>
                 </div>
               </div>
@@ -50,41 +50,41 @@ const Products = () => {
             <div className="w-2/4 h-11/12 m-2 cups product_box">
               <div className="cups_div">
                 <div className="cup_info">
-                  <p className="text-white text-center font-bold text-sm pt-5">
+                  <p className="text-white  font-bold text-sm pb-1 p-5">
                     We Offer{" "}
                   </p>
                   <ul className="text-white">
                     <li className=" pl-5 opacity-75 text-white font-bold opt_font">
-                      &#9733; Cups
+                       Cups
                     </li>
                     <li className=" pl-5 opacity-75 text-white font-bold opt_font">
-                      &#9733; Mugs
+                       Mugs
                     </li>
                     <li className=" pl-5 opacity-75 text-white font-bold opt_font">
-                      &#9733; Thermos Flask
+                       Thermos Flask
                     </li>
                     <li className=" pl-5 opacity-75 text-white font-bold opt_font">
-                      &#9733; Water Bottles
+                       Water Bottles
                     </li>
                     <li className=" pl-5 opacity-75 text-white font-bold opt_font">
-                      &#9733; Plates
+                       Plates
                     </li>
                   </ul>
-                  <p className="text-white text-center font-bold text-sm pt-1">
+                  <p className="text-white  font-bold text-sm pt-1 pl-5">
                     Contact us for
                   </p>
                   <ul className="text-white">
                     <li className=" pl-5 opacity-75 text-white font-bold opt_font">
-                      &#9733; Tags{" "}
+                       Tags{" "}
                     </li>
                     <li className=" pl-5 opacity-75 text-white font-bold opt_font">
-                      &#9733; Key Holder
+                       Key Holder
                     </li>
                     <li className=" pl-5 opacity-75 text-white font-bold opt_font">
-                      &#9733; Stamps
+                       Stamps
                     </li>
                     <li className=" pl-5 opacity-75 text-white font-bold opt_font">
-                      &#9733; Bracelets
+                       Bracelets
                     </li>
                   </ul>
                 </div>
@@ -94,37 +94,37 @@ const Products = () => {
           <div className="flex h-2/4 w-2/3 justify-center mx-auto">
             <div className=" web_div w-2/4 m-2 bg-white h-3/4 product_box">
             <div className="inner_web_div">
-            <p className="text-white text-center font-bold text-sm pt-5">
+            <p className="text-white  font-bold text-sm pb-1 p-5">
                     Go Digital
                   </p>
                   <p className="  pl-5 opacity-75 text-white font-bold opt_font ">
-                    &#9733; Web Design
+                     Web Design
                   </p>
                   <p className="  pl-5 opacity-75 text-white font-bold opt_font ">
-                    &#9733; Website Development 
+                     Website Development 
                   </p>
                   <p className="  pl-5 opacity-75 text-white font-bold opt_font ">
-                    &#9733; Web Hosting 
+                     Web Hosting 
                   </p>
                   
                   <p className="  pl-5 opacity-75 text-white font-bold opt_font ">
-                    &#9733; Domain Registration
+                     Domain Registration
                   </p>
                   <p className="  pl-5 opacity-75 text-white font-bold opt_font ">
-                    &#9733; Digital Marketing 
+                     Digital Marketing 
                   </p>
                   <p className="  pl-5 opacity-75 text-white font-bold opt_font ">
-                    &#9733; Branding and Communication                  </p>
+                     Branding and Communication                  </p>
 
             </div>
 
             </div>
             <div className="w-1/3 m-2 bg-white h-3/4 product_box">
             <div className="more_info">
-            <p className="text-white text-center font-bold text-sm pt-5">
+            <p className="text-white  font-bold text-sm pb-1 p-5">
                     Get Noticed Today!
                   </p>
-                  <p className=" text-sm p-5 opacity-75 text-white font-bold opt_font ">
+                  <p className=" text-sm pt-2 p-5 opacity-75 text-white font-bold opt_font ">
                    We offer products of a wide variety customized and branded to fit your needs. Visit our expirienced team today to get your brand recognized proffesionally!!!
                      </p>
             </div>

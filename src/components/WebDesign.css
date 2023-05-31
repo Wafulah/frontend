@@ -1,0 +1,102 @@
+.web_head {
+    /* background-image: url('../assets/web_bg.jpg'); */
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+
+}
+
+.comp {
+    background-image: url("../assets/comp.png");
+    background-size: cover;
+    scale: 120%;
+  
+}
+
+.web_design_glassmorphism {
+    background: rgba(245, 141, 141, 0.247);
+    box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(224, 1, 1, 0.884);
+    border-radius: 20px;
+    width: 80%;
+    height: 85%;
+  }
+  
+.web_explore_btn {
+    background-color: rgb(73, 5, 129);
+    box-shadow: 1px 1px 30px  rgba(255, 3, 3, 0.815);
+    transition: background-color 0.3s, box-shadow 0.7s;
+    border-radius: 20px;
+  }
+.web_explore_btn:hover {
+    transform: scale(1.2);
+    transform-origin: center;
+    box-shadow: 1px 2px 100px rgb(252, 4, 4);
+  }
+  
+.web_body {
+    width: 80%;
+    /* height: 100%; */
+    margin: auto;
+}
+.web_services {
+    height: 900px;
+    /* background-color: bisque; */
+}
+.text_underline {
+    display: inline-block;
+    position: relative;
+  }
+  
+.text_underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    width: 80%;
+    height: 4px;
+    background-color: rgb(167, 4, 4);
+    border-radius: 2px;
+  }
+.web_info_div  {
+    width: 32%;
+    height: 95%;
+    background: rgba(245, 141, 141, 0.096);
+    box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(224, 1, 1, 0.884);
+    border-radius: 10px;
+
+}
+.web_about {
+    height: 600px;
+
+}
+
+.abt_comp {
+    background-image: url('../assets/abt_comp.png');
+    background-size: cover;
+    
+}
+.web_projects {
+    height: 270px;
+    width: 100%;
+    
+    
+}
+.web_project_div  {
+    width: 23%;
+    height: 95%;
+    background: rgba(245, 141, 141, 0.096);
+    box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(224, 1, 1, 0.884);
+    border-radius: 0 0 10px 10px;
+    border-width: 10px 1px 1px 1px ;
+
+}

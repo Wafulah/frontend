@@ -15,25 +15,27 @@
   color: rgba(230, 4, 4, 0.863);
 }
 .gifts {
-  background-image: url("../assets/gifts.png");
+  background-image: url("../assets/cups_div.jpg");
   background-size: cover;
 }
 .gifts_div {
-  background-color: rgba(247, 0, 0, 0.863);
+  background-color: rgba(247, 0, 0, 0);
   height: 100%;
   width: 100%;
   /* border-bottom-left-radius: 90%; */
   /* border-bottom-left-radius: 50%; */
 }
 .cups {
-  background-image: url("../assets/cups.png");
+  background-image: url("../assets/cups_div.jpg");
   background-size: cover;
 }
 
 .cups_div {
-  background-color: rgba(247, 0, 0, 0.863);
+  /* background-color: rgba(247, 0, 0, 0.863); */
+  background-image: url("../assets/cups.png");
   height: 100%;
   width: 100%;
+  background-size: cover;
   /* border-bottom-right-radius: 90%; */
   /* border-bottom-left-radius: 50%; */
 }
@@ -44,21 +46,21 @@
 }
 .web_div {
   background-color: white;
-  background-image: url("../assets/web.jpg");
+  background-image: url("../assets/cups_div.jpg");
   background-size: cover;
 }
 .inner_web_div {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(247, 0, 0, 0.863);
-    /* border-top-right-radius: 90%; */
-    /* border-bottom-left-radius: 50%; */
-
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(247, 0, 0, 0.863); */
+  /* border-top-right-radius: 90%; */
+  /* border-bottom-left-radius: 50%; */
 }
 .more_info {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(247, 0, 0, 0.863);
-    /* border-top-right-radius: 50%;  */
-    /* /* border-bottom-left-radius: 50%; */
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/cups_div.jpg");
+  /* background-color: rgba(247, 0, 0, 0.863); */
+  /* border-top-right-radius: 50%;  */
+  /* /* border-bottom-left-radius: 50%; */
 }

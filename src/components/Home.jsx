@@ -15,6 +15,7 @@ import LogoImage from "../assets/HandyLogo.png";
 // import TiImage from "../assets/Ti.png";
 // import BusinessImage from "../assets/bussiness_times.png";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 
 import "animate.css";
 
@@ -44,18 +45,12 @@ const Home = () => {
               </Link>
             </p>
             <p className="cursor-pointer hover:bg-red-700 font-semibold opacity-75 text-white px-6 py-2.5">
-              <Link
-                activeClass="active"
-                to="services"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                Service
-              </Link>
+              <RouterLink to="/design">Graphic Design</RouterLink>
             </p>
             <p className="cursor-pointer hover:bg-red-700 font-semibold opacity-75 text-white px-6 py-2.5">
+              <RouterLink to="/web_design">Web Design</RouterLink>
+            </p>
+            {/* <p className="cursor-pointer hover:bg-red-700 font-semibold opacity-75 text-white px-6 py-2.5">
               <Link
                 activeClass="active"
                 to="projects"
@@ -66,11 +61,23 @@ const Home = () => {
               >
                 Projects
               </Link>
-            </p>
+            </p> */}
+            {/* <p className="cursor-pointer hover:bg-red-700 font-semibold opacity-75 text-white px-6 py-2.5">
+              <Link
+                activeClass="active"
+                to="products"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Our Products
+              </Link>
+            </p> */}
             <p className="cursor-pointer hover:bg-red-700 font-semibold opacity-75 text-white  px-6 py-2.5">
               <Link
                 activeClass="active"
-                to="about"
+                to="products"
                 spy={true}
                 smooth={true}
                 offset={-70}
@@ -122,7 +129,7 @@ const Home = () => {
               <img
                 src={HeadImage}
                 alt="Background Image"
-                style={{ marginTop: "0" }}
+                style={{ maginTop: "0" }}
               />
             </div>
 
@@ -151,19 +158,19 @@ const Home = () => {
       {/* end of holder div */}
       <div className="extra"></div>
       <div id="about">
-      <Curve />
+        <Curve />
 
-      <About  />
+        <About />
       </div>
       <div className="extra"></div>
 
       <div id="services" className="holder">
-        <Services  />
+        <Services />
         <div className="extra"></div>
       </div>
       <div id="projects">
-      <ProjectCurve />
-      <Projects  />
+        <ProjectCurve />
+        <Projects />
       </div>
       <div id="products">
         <Products />
@@ -171,7 +178,7 @@ const Home = () => {
       <div className="extra"></div>
       <div className="holder">
         <div id="contact">
-        <Contact  />
+          <Contact />
         </div>
       </div>
     </div>
