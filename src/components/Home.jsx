@@ -32,7 +32,7 @@ const Home = () => {
           </div>
 
           <div className="name float-right flex flex-row justify-end w-3/4">
-            <p className="cursor-pointer hover:bg-red-700 font-semibold opacity-75 text-white px-6 py-2.5">
+            <p className="cursor-pointer hover:bg-red-700 font-semibold opacity-75 text-white px-3 py-2.5">
               <Link
                 activeClass="active"
                 to="home"
@@ -44,11 +44,14 @@ const Home = () => {
                 Home
               </Link>
             </p>
-            <p className="cursor-pointer hover:bg-red-700 font-semibold opacity-75 text-white px-6 py-2.5">
+            <p className="cursor-pointer text-sm hover:bg-red-700 font-semibold opacity-75 text-white px-3 py-2.5">
               <RouterLink to="/design">Graphic Design</RouterLink>
             </p>
-            <p className="cursor-pointer hover:bg-red-700 font-semibold opacity-75 text-white px-6 py-2.5">
+            <p className="cursor-pointer text-sm hover:bg-red-700 font-semibold opacity-75 text-white px-3 py-2.5">
               <RouterLink to="/web_design">Web Design</RouterLink>
+            </p>
+            <p className="cursor-pointer text-sm hover:bg-red-700 font-semibold opacity-75 text-white px-3 py-2.5">
+              <RouterLink to="/interior_design">Interior Design</RouterLink>
             </p>
             {/* <p className="cursor-pointer hover:bg-red-700 font-semibold opacity-75 text-white px-6 py-2.5">
               <Link
@@ -74,7 +77,7 @@ const Home = () => {
                 Our Products
               </Link>
             </p> */}
-            <p className="cursor-pointer hover:bg-red-700 font-semibold opacity-75 text-white  px-6 py-2.5">
+            <p className="cursor-pointer text-sm hover:bg-red-700 font-semibold opacity-75 text-white  px-3 py-2.5">
               <Link
                 activeClass="active"
                 to="products"
@@ -86,7 +89,7 @@ const Home = () => {
                 About Us
               </Link>
             </p>
-            <p className="cursor-pointer hover:bg-red-700 font-semibold opacity-75 text-white px-6 py-2.5">
+            <p className="cursor-pointer text-sm hover:bg-red-700 font-semibold opacity-75 text-white px-3 py-2.5">
               <Link
                 activeClass="active"
                 to="contact"

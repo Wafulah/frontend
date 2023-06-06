@@ -1,0 +1,101 @@
+.Interior_body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.interior_home {
+  background-image: url("../assets/interior_home.jpg");
+  background-size: cover;
+  height: 110vh;
+  width: 100%;
+}
+.text_color {
+  color: rgb(227, 227, 228);
+}
+
+.explore_btn {
+  background-color: rgb(6, 0, 27);
+  box-shadow: 1px 2px 30px rgba(4, 78, 214, 0.363);
+  transition: background-color 0.3s, box-shadow 0.7s;
+  border-radius: 20px;
+}
+.explore_btn:hover {
+  transform: scale(1.2);
+  transform-origin: center;
+  box-shadow: 1px 2px 200px rgb(1, 4, 194);
+}
+.experience {
+  width: 100%;
+  height: 100vh;
+}
+.experience_divs {
+  width: 32%;
+  border-top: 5px solid rgb(6, 0, 27);
+}
+.interior_contact {
+  height: 100vh;
+  width: 100%;
+}
+.office {
+  background-image: url("../assets/office.jpg");
+  background-size: cover;
+}
+
+.id_swiper_div {
+  height: 80%;
+
+  width: 100%;
+}
+
+.swiper_div {
+  height: 90%;
+  width: 32%;
+}
+.id_div {
+  height: 620px;
+}
+.id_about {
+  height: 400px;
+}
+.id_about_info {
+  background-color: rgba(1, 1, 49, 0.671);
+  height: 90%;
+  width: 31%;
+  border-radius: 10px;
+}
+/* body {
+  font-family: "Helvetica", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica", Arial, sans-serif;
+} */
+/* body {
+  font-family: "Garamond", "Times New Roman", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Garamond", "Times New Roman", serif;
+} */
+body {
+  font-family: "Futura", Arial, sans-serif;
+  letter-spacing: 1px; /* Increase the letter spacing */
+  line-height: 1.5; /* Increase the line height */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Futura", Arial, sans-serif;
+  letter-spacing: 1px; /* Increase the letter spacing */
+  line-height: 1.5; /* Increase the line height */
+}

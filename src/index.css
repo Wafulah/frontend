@@ -12,10 +12,16 @@ html {
   @apply xl:text-[7rem] text-[3rem] xl:leading-[8rem] leading-[4rem] font-black text-white;
 }
 .small-head-text {
-  @apply xl:text-[4rem] text-[4rem] xl:leading-[1rem] leading-[3rem] font-medium ;
+  @apply xl:text-[4rem] text-[4rem] xl:leading-[1rem] leading-[3rem] font-medium;
 }
 .smaller-head-text {
   @apply xl:text-[2rem] text-[2rem] xl:leading-[1rem] leading-[2rem] font-medium text-white;
+}
+.interior-head-text {
+  @apply xl:text-[7rem] text-[3rem] xl:leading-[8rem] leading-[4rem] font-black text-white;
+  background: linear-gradient(to right, rgb(6, 0, 27) 10%, rgb(252, 249, 249) 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .glassmorphism {
   background: rgba(248, 172, 172, 0.25);

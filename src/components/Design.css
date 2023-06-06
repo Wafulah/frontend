@@ -1,3 +1,19 @@
+body {
+  font-family: "Futura", Arial, sans-serif;
+  letter-spacing: 1px; /* Increase the letter spacing */
+  line-height: 1.5; /* Increase the line height */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Futura", Arial, sans-serif;
+  letter-spacing: 1px; /* Increase the letter spacing */
+  line-height: 1.5; /* Increase the line height */
+}
 .design_home {
   background-color: black;
   background-image: url("../assets/design.jpg");
@@ -81,6 +97,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 .overlay {
@@ -90,6 +107,7 @@
   height: 100%;
   transition: transform 0.3s ease-in-out;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .overlay.slide-up {

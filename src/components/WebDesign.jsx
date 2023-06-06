@@ -2,20 +2,75 @@ import React from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
 import "./WebDesign.css";
+import "animate.css";
 
 import LogoImage from "../assets/HandyLogo.png";
 import { HiOutlineArrowSmRight } from "react-icons/hi";
-import { FaLaptopCode, FaServer,FaRegHandshake, FaUserClock } from "react-icons/fa";
+import { useInView } from "react-intersection-observer";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  FaLaptopCode,
+  FaServer,
+  FaRegHandshake,
+  FaUserClock,
+} from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
 import { TiSocialInstagram } from "react-icons/ti";
 import { MdAppShortcut } from "react-icons/md";
 import { GiPodiumWinner } from "react-icons/gi";
-import { MdGroups } from "react-icons/md"; 
+import { MdGroups } from "react-icons/md";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 
-import Contact from './Contact'; 
+import Contact from "./Contact";
 
 const WebDesign = () => {
+  const innerLeftDivVariants = {
+    hidden: {
+      x: "-100%", // Starting position (hidden below the screen)
+    },
+    visible: {
+      x: 0, // Visible position (slid up to the top)
+      transition: {
+        duration: 1.5,
+      },
+    },
+  };
+  const innerTopADivVariants = {
+    hidden: {
+      y: "100%", // Starting position (hidden below the screen)
+    },
+    visible: {
+      y: 0, // Visible position (slid up to the top)
+      transition: {
+        duration: 1.0,
+      },
+    },
+  };
+  const innerTopBDivVariants = {
+    hidden: {
+      y: "-100%", // Starting position (hidden below the screen)
+    },
+    visible: {
+      y: 0, // Visible position (slid up to the top)
+      transition: {
+        duration: 2.0,
+      },
+    },
+  };
+
+  const [ref, inView] = useInView({
+    triggerOnce: false, // Trigger the animation once when it comes into view
+  });
+
+  const [refText, inViewText] = useInView({
+    triggerOnce: false, // Trigger the animation every time the element comes into view
+    threshold: 0.2, // Adjust the threshold value as needed
+  });
+  const [refSrvText, inViewSrvText] = useInView({
+    triggerOnce: false, // Trigger the animation every time the element comes into view
+    threshold: 0.1, // Adjust the threshold value as needed
+  });
+
   return (
     <div className="bg-black">
       <div className=" flex justify-center items-center web_head">
@@ -47,8 +102,8 @@ const WebDesign = () => {
                 <p className="pt-4 px-3 opacity-75 text-white text-bold hover:bg-red-700 cursor-pointer">
                   <RouterLink to="/design">Web Design</RouterLink>
                 </p>
-                <p className="pt-4 px-3 opacity-75 text-white text-bold hover:bg-red-700 cursor-pointer">
-                  <RouterLink to="/design">Interior Design</RouterLink>
+                <p className="cursor-pointer hover:bg-red-700 font-semibold opacity-75 text-white px-6 py-2.5">
+                  <RouterLink to="/interior_design">Interior Design</RouterLink>
                 </p>
 
                 <p className="pt-4 px-3 opacity-75 text-white text-bold hover:bg-red-700 cursor-pointer">
@@ -67,12 +122,39 @@ const WebDesign = () => {
             </div>
             <div className="w-full h-5/6 flex">
               <div className="w-1/2 h-full ">
-                <p className="p-4 pt-10 text-white small-head-text">Handy </p>
+                <p
+                  ref={refText}
+                  className={`animate__animated ${
+                    inViewText ? "animate__bounceIn" : ""
+                  } p-4 pt-10 text-white small-head-text`}
+                >
+                  Handy{" "}
+                </p>
                 <br />
-                <p className="p-4  text-white small-head-text"> Creations </p>
+                <p
+                  ref={refText}
+                  className={`animate__animated ${
+                    inViewText ? "animate__fadeInRight" : ""
+                  } p-4 text-white small-head-text`}
+                >
+                  {" "}
+                  Creations{" "}
+                </p>
                 <br />
-                <p className="p-4  text-white small-head-text">Web Solutions</p>
-                <p className="p-4 pt-6 text-white text-sm">
+                <p
+                  ref={refText}
+                  className={`animate__animated ${
+                    inViewText ? "animate__bounceIn" : ""
+                  } p-4 text-white small-head-text`}
+                >
+                  Web Solutions
+                </p>
+                <p
+                  ref={ref}
+                  className={`animate__animated ${
+                    inViewText ? "animate__slideInUp" : ""
+                  } p-4 pt-6 text-white text-sm`}
+                >
                   Unlock the potential of your online presence with our
                   cutting-edge web solutions. From captivating designs to
                   seamless functionality, we empower your business to thrive in
@@ -107,7 +189,14 @@ const WebDesign = () => {
             </div>
             <div className="h-2/3 w-full ">
               <div className="w-1/2 h-full">
-                <p className="text-white pt-2 p-5">
+              <p
+        ref={refSrvText}
+        className={`animate__animated ${
+          inViewSrvText ? "animate__fadeInLeft" : ""
+        }  text-white text-white pt-2 p-5`}
+      >
+
+                
                   {" "}
                   Our comprehensive suite of services ensures your online
                   presence is a true reflection of your brand's uniqueness and
@@ -116,8 +205,13 @@ const WebDesign = () => {
               </div>
             </div>
           </div>
-          <div className="h-3/4 w-full ">
-            <div className="w-full h-1/2 flex justify-between">
+          <div className="h-3/4 w-full " ref={ref}>
+            <motion.div
+              className="w-full h-1/2 flex justify-between"
+              variants={innerTopADivVariants}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+            >
               <div className="web_info_div flex justify-center items-center">
                 <div className="mx-auto h-5/6 w-5/6 ">
                   <FaLaptopCode className="text-6xl text-white" />
@@ -159,8 +253,13 @@ const WebDesign = () => {
                   </p>
                 </div>
               </div>
-            </div>
-            <div className="w-full h-1/2 flex justify-between">
+            </motion.div>
+            <motion.div
+              className="w-full h-1/2 flex justify-between"
+              variants={innerTopBDivVariants}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+            >
               <div className="web_info_div  flex justify-center items-center">
                 <div className="mx-auto h-5/6 w-5/6 ">
                   <TiSocialInstagram className="text-6xl text-white" />
@@ -206,9 +305,10 @@ const WebDesign = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
+        <div className="h-20 w-full"></div>
         <div className="web_about mb-5 w-full flex">
           <div className="w-3/5 h-full abt_comp"></div>
           <div className="w-2/5 h-4/5">
@@ -219,7 +319,10 @@ const WebDesign = () => {
             <h2 className=" pt-3 text-white smaller-head-text">
               <span className="text_underline"> Us </span>
             </h2>
-            <p className="text-white pt-5 text-sm opacity-75">
+            <p
+             
+              className="pt-5 text-white text-sm opacity-75"
+            >
               Choose us for your web design and development needs. We are
               dedicated to delivering exceptional results, bringing creativity
               and expertise to every project. Let us be your trusted partner for
@@ -278,57 +381,57 @@ const WebDesign = () => {
             </div>
           </div>
         </div>
-        <div className="web_projects flex justify-between mb-10">
-        <div className="web_project_div ">
-        <div className="flex justify-center h-1/3 w-full items-center">
-            <AiOutlineFundProjectionScreen className="pt-3 text-bold text-white text-7xl" />
+        <div className="h-32 w-full"></div>
+        <div className="mt-10 web_projects flex justify-between mb-10">
+          <div className="web_project_div ">
+            <div className="flex justify-center h-1/3 w-full items-center">
+              <AiOutlineFundProjectionScreen className="pt-3 text-bold text-white text-7xl" />
             </div>
             <div className="flex justify-center h-1/3 w-full items-center">
-            <p className="pt-3 text-white text-bold text-5xl">5000+</p>
+              <p className="pt-3 text-white text-bold text-5xl">5000+</p>
             </div>
             <div className="flex justify-center h-1/3 w-full items-center">
-            <p className="text-bold text-white text-54xl">Projects done</p>
+              <p className="text-bold text-white text-54xl">Projects done</p>
             </div>
+          </div>
+          <div className="web_project_div">
+            <div className="flex justify-center h-1/3 w-full items-center">
+              <MdGroups className="pt-3 text-bold text-white text-7xl" />
+            </div>
+            <div className="flex justify-center h-1/3 w-full items-center">
+              <p className="pt-3 text-white text-bold text-5xl">20+</p>
+            </div>
+            <div className="flex justify-center h-1/3 w-full items-center">
+              <p className="text-bold text-white text-54xl">Developers</p>
+            </div>
+          </div>
+          <div className="web_project_div">
+            <div className="flex justify-center h-1/3 w-full items-center">
+              <FaRegHandshake className="pt-3 text-bold text-white text-7xl" />
+            </div>
+            <div className="flex justify-center h-1/3 w-full items-center">
+              <p className="pt-3 text-white text-bold text-5xl">30+</p>
+            </div>
+            <div className="flex justify-center h-1/3 w-full items-center">
+              <p className="text-bold text-white text-54xl">Happy Clients</p>
+            </div>
+          </div>
+          <div className="web_project_div">
+            <div className="flex justify-center h-1/3 w-full items-center">
+              <FaUserClock className="pt-3 text-bold text-white text-7xl" />
+            </div>
+            <div className="flex justify-center h-1/3 w-full items-center">
+              <p className="pt-3 text-white text-bold text-5xl">10+</p>
+            </div>
+            <div className="flex justify-center h-1/3 w-full items-center">
+              <p className="text-bold text-white text-54xl">Years</p>
+            </div>
+          </div>
+        </div>
+        <div className="h-32 w-full"></div>
 
-        </div>
-        <div className="web_project_div">
-        <div className="flex justify-center h-1/3 w-full items-center">
-            <MdGroups className="pt-3 text-bold text-white text-7xl" />
-            </div>
-            <div className="flex justify-center h-1/3 w-full items-center">
-            <p className="pt-3 text-white text-bold text-5xl">20+</p>
-            </div>
-            <div className="flex justify-center h-1/3 w-full items-center">
-            <p className="text-bold text-white text-54xl">Developers</p>
-            </div>
-        </div>
-        <div className="web_project_div">
-        <div className="flex justify-center h-1/3 w-full items-center">
-            <FaRegHandshake className="pt-3 text-bold text-white text-7xl" />
-            </div>
-            <div className="flex justify-center h-1/3 w-full items-center">
-            <p className="pt-3 text-white text-bold text-5xl">30+</p>
-            </div>
-            <div className="flex justify-center h-1/3 w-full items-center">
-            <p className="text-bold text-white text-54xl">Happy Clients</p>
-            </div>
-        </div>
-        <div className="web_project_div">
-        <div className="flex justify-center h-1/3 w-full items-center">
-            <FaUserClock className="pt-3 text-bold text-white text-7xl" />
-            </div>
-            <div className="flex justify-center h-1/3 w-full items-center">
-            <p className="pt-3 text-white text-bold text-5xl">10+</p>
-            </div>
-            <div className="flex justify-center h-1/3 w-full items-center">
-            <p className="text-bold text-white text-54xl">Years</p>
-            </div>
-        </div>
-
-        </div>
-        <div className="h-16 w-full"></div>
-        <div id="contact"  >
-            <Contact />
+        <div id="contact">
+          <Contact />
         </div>
       </div>
     </div>
