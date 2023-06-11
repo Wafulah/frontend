@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -16,17 +16,35 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
-import P1Image from "../assets/ID1.jpg";
-import P2Image from "../assets/ID2.jpg";
-import P3Image from "../assets/ID3.jpg";
-import P4Image from "../assets/ID4.jpg";
-import P5Image from "../assets/ID5.jpg";
-import P6Image from "../assets/ID6.jpg";
-import P7Image from "../assets/office.jpg";
+// import P1Image from "../assets/ID1.jpg";
+// import P2Image from "../assets/ID2.jpg";
+// import P3Image from "../assets/ID3.jpg";
+// import P4Image from "../assets/ID4.jpg";
+// import P5Image from "../assets/ID5.jpg";
+// import P6Image from "../assets/ID6.jpg";
+// import P7Image from "../assets/office.jpg";
 
 import "animate.css";
 
 const InteriorDesign = () => {
+  const [interiorDesigns, setInteriorDesigns] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:8000/backend/api/interior-designs/");
+        const data = await response.json();
+        setInteriorDesigns(data);
+      } catch (error) {
+        console.error("Error fetching interior designs:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
+
   const [refHm, inViewHm] = useInView({
     triggerOnce: false,
     threshold: 0.4,
@@ -129,7 +147,7 @@ const InteriorDesign = () => {
               <p
                 ref={refBtn}
                 className={`animate__animated ${
-                  inViewBtn ? "animate__fadeInUp" : ""
+                  inViewBtn ? "animate__pulse" : ""
                 } explore_btn p-5 text-white smaller-head-text cursor-pointer `}
               >
                 Explore
@@ -299,19 +317,23 @@ const InteriorDesign = () => {
           pagination={{ clickable: true }}
           autoplay={{ delay: 900, disableOnInteraction: false }}
         >
-          <SwiperSlide className="flex-shrink-0 swiper_div w-1/4 m-2">
+         {interiorDesigns.map((interiorDesign) => (
+          <SwiperSlide key={interiorDesign.id} className="flex-shrink-0 swiper_div w-1/4 m-2">
             <div className="id_swiper_div">
               <img
-                src={P1Image}
+                src={interiorDesign.pic}
                 alt="Background Image"
                 className="h-full w-full object-cover "
               />
             </div>
             <div className="h-1/5 w-full mx-auto flex justify-between ">
               <div className="h-full w-5/6">
-                <p className="text-white opacity-75 pt-2">Office</p>
+              
+              {interiorDesign.tag.map((tag) => (
+                <p key={tag.id} className="text-white opacity-75 pt-2">{tag.name}</p>
+              ))}
                 <p className="pt-2 text-white text-bold text-lg">
-                  Modern Design
+                  {interiorDesign.name}
                 </p>
               </div>
               <div className="h-1/4 w-1/6 flex justify-end">
@@ -321,135 +343,8 @@ const InteriorDesign = () => {
               </div>
             </div>
           </SwiperSlide>
+         ))}
 
-          <SwiperSlide className="flex-shrink-0  swiper_div w-1/4   m-2">
-            <div className="id_swiper_div">
-              <img
-                src={P2Image}
-                alt="Background Image"
-                className="h-full w-full object-cover "
-              />
-            </div>
-            <div className="h-1/5 w-full mx-auto flex justify-between ">
-              <div className="h-full w-5/6">
-                <p className="text-white opacity-75 pt-2">Office</p>
-                <p className="pt-2 text-white text-bold text-lg">
-                  Office Arrangement
-                </p>
-              </div>
-              <div className="h-1/4 w-1/6 flex justify-end">
-                <p className="pt-3 text-white">
-                  <FaInfoCircle className="text_white opacity-75" />
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide className="flex-shrink-0  swiper_div w-1/4   m-2">
-            <div className="id_swiper_div">
-              <img
-                src={P3Image}
-                alt="Background Image"
-                className="h-full w-full object-cover "
-              />
-            </div>
-            <div className="h-1/5 w-full mx-auto flex justify-between ">
-              <div className="h-full w-5/6">
-                <p className="text-white opacity-75 pt-2">Decor</p>
-                <p className="pt-2 text-white text-bold text-lg">Green Vibes</p>
-              </div>
-              <div className="h-1/4 w-1/6 flex justify-end">
-                <p className="pt-3 text-white">
-                  <FaInfoCircle className="text_white opacity-75" />
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide className="flex-shrink-0  swiper_div w-1/4   m-2">
-            <div className="id_swiper_div">
-              <img
-                src={P4Image}
-                alt="Background Image"
-                className="h-full w-full object-cover "
-              />
-            </div>
-            <div className="h-1/5 w-full mx-auto flex justify-between ">
-              <div className="h-full w-5/6">
-                <p className="text-white opacity-75 pt-2">Home</p>
-                <p className="pt-2 text-white text-bold text-lg">BedRoom</p>
-              </div>
-              <div className="h-1/4 w-1/6 flex justify-end">
-                <p className="pt-3 text-white">
-                  <FaInfoCircle className="text_white opacity-75" />
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          {/* end of div */}
-          <SwiperSlide className="flex-shrink-0  swiper_div w-1/4   m-2">
-            <div className="id_swiper_div">
-              <img
-                src={P5Image}
-                alt="Background Image"
-                className="h-full w-full object-cover "
-              />
-            </div>
-            <div className="h-1/5 w-full mx-auto flex justify-between ">
-              <div className="h-full w-5/6">
-                <p className="text-white opacity-75 pt-2">Home</p>
-                <p className="pt-2 text-white text-bold text-lg">Living Room</p>
-              </div>
-              <div className="h-1/4 w-1/6 flex justify-end">
-                <p className="pt-3 text-white">
-                  <FaInfoCircle className="text_white opacity-75" />
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide className="flex-shrink-0  swiper_div w-1/4   m-2">
-            <div className="id_swiper_div">
-              <img
-                src={P6Image}
-                alt="Background Image"
-                className="h-full w-full object-cover "
-              />
-            </div>
-            <div className="h-1/5 w-full mx-auto flex justify-between ">
-              <div className="h-full w-5/6">
-                <p className="text-white opacity-75 pt-2">Decor</p>
-                <p className="pt-2 text-white text-bold text-lg">Dark Vibes</p>
-              </div>
-              <div className="h-1/4 w-1/6 flex justify-end">
-                <p className="pt-3 text-white">
-                  <FaInfoCircle className="text_white opacity-75" />
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="flex-shrink-0  swiper_div w-1/4   m-2">
-            <div className="id_swiper_div">
-              <img
-                src={P7Image}
-                alt="Background Image"
-                className="h-full w-full object-cover "
-              />
-            </div>
-            <div className="h-1/5 w-full mx-auto flex justify-between ">
-              <div className="h-full w-5/6">
-                <p className="text-white opacity-75 pt-2">Office</p>
-                <p className="pt-2 text-white text-bold text-lg">
-                  Modern Design
-                </p>
-              </div>
-              <div className="h-1/4 w-1/6 flex justify-end">
-                <p className="pt-3 text-white">
-                  <FaInfoCircle className="text_white opacity-75" />
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
           {/* end of test divs  */}
         </Swiper>
       </div>

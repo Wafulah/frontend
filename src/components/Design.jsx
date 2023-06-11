@@ -1,4 +1,5 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
+
 import { HiOutlineArrowSmRight } from "react-icons/hi";
 import { FaTimes } from "react-icons/fa";
 import { Link, animateScroll as scroll } from "react-scroll";
@@ -34,6 +35,21 @@ import { motion, AnimatePresence } from "framer-motion";
 import "animate.css";
 
 const Overlay = ({ visible, onClose }) => {
+  const [designs, setDesigns] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:8000/backend/api/designs/");
+        const data = await response.json();
+        setDesigns(data);
+      } catch (error) {
+        console.error("Error fetching designs:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
   const handleCloseClick = () => {
     onClose();
   };
@@ -106,15 +122,15 @@ const Overlay = ({ visible, onClose }) => {
   };
 
   const [ref, inView] = useInView({
-    triggerOnce: false, 
+    triggerOnce: false,
     threshold: 0.2, // Trigger the animation once when it comes into view
   });
   const [refServices, inViewServices] = useInView({
     triggerOnce: false,
-    threshold: 0.2,  // Trigger the animation once when it comes into view
+    threshold: 0.2, // Trigger the animation once when it comes into view
   });
   const [refProjects, inViewProjects] = useInView({
-    triggerOnce: false, 
+    triggerOnce: false,
     threshold: 0.2, // Trigger the animation once when it comes into view
   });
 
@@ -298,9 +314,12 @@ const Overlay = ({ visible, onClose }) => {
             <span className="text_underline">Our</span> Services
           </h2>
         </div>
-        <motion.div className="flex justify-left"  variants={innerProjDivVariants}
-              initial="hidden"
-              animate={inViewProjects ? "visible" : "hidden"}>
+        <motion.div
+          className="flex justify-left"
+          variants={innerProjDivVariants}
+          initial="hidden"
+          animate={inViewProjects ? "visible" : "hidden"}
+        >
           <Swiper
             className="scroll_div w-auto flex overflow-x-auto mt-10 justify-between"
             modules={[Navigation, Pagination, Autoplay, A11y]}
@@ -310,74 +329,19 @@ const Overlay = ({ visible, onClose }) => {
             pagination={{ clickable: true }}
             autoplay={{ delay: 900, disableOnInteraction: false }}
           >
-            <SwiperSlide className="flex-shrink-0 pic_div w-1/4 m-2">
+          {designs.map((design) => (
+            <SwiperSlide key={design.id} className="flex-shrink-0 pic_div w-1/4 m-2">
               <div className="inner_pic_div">
                 <img
-                  src={P1Image}
+                  src={design.pic}
                   alt="Background Image"
                   className="h-full w-full object-cover rounded-lg"
                 />
               </div>
             </SwiperSlide>
+          ))}
 
-            <SwiperSlide className="flex-shrink-0  pic_div w-1/4   m-2">
-              <div className="inner_pic_div">
-                <img
-                  src={P2Image}
-                  alt="Background Image"
-                  className="h-full w-full object-cover rounded-lg"
-                />
-              </div>
-            </SwiperSlide>
 
-            <SwiperSlide className="flex-shrink-0  pic_div w-1/4   m-2">
-              <div className="inner_pic_div">
-                <img
-                  src={P3Image}
-                  alt="Background Image"
-                  className="h-full w-full object-cover rounded-lg"
-                />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide className="flex-shrink-0  pic_div w-1/4   m-2">
-              <div className="inner_pic_div">
-                <img
-                  src={P4Image}
-                  alt="Background Image"
-                  className="h-full w-full object-cover rounded-lg"
-                />
-              </div>
-            </SwiperSlide>
-            {/* end of div */}
-            <SwiperSlide className="flex-shrink-0  pic_div w-1/4   m-2">
-              <div className="inner_pic_div">
-                <img
-                  src={P5Image}
-                  alt="Background Image"
-                  className="h-full w-full object-cover rounded-lg"
-                />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide className="flex-shrink-0  pic_div w-1/4   m-2">
-              <div className="inner_pic_div">
-                <img
-                  src={P6Image}
-                  alt="Background Image"
-                  className="h-full w-full object-cover rounded-lg"
-                />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="flex-shrink-0  pic_div w-1/4   m-2">
-              <div className="inner_pic_div">
-                <img
-                  src={P7Image}
-                  alt="Background Image"
-                  className="h-full w-full object-cover rounded-lg"
-                />
-              </div>
-            </SwiperSlide>
             {/* end of test divs  */}
           </Swiper>
         </motion.div>
@@ -471,10 +435,13 @@ const Design = () => {
             </div>
           </nav>
           <div className="design_body justify-between flex" ref={ref}>
-            <motion.div className="creative_div w-1/2 h-3/4  flex justify-center items-center"  variants={innerLeftDivVariants}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}>
-              <div className="h-1/3 w-2/5 inner_creative_div"></div>
+            <motion.div
+              className="creative_div w-1/2 h-5/6  flex justify-center items-center"
+              variants={innerLeftDivVariants}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+            >
+              <div className="h-full w-3/4 inner_creative_div"></div>
             </motion.div>
             <div className="  design_pic w-1/2 h-3/4 ">
               <h3 className="animate__animated animate__rotateIn  flip-text transition duration-300 head-text ">
@@ -498,7 +465,7 @@ const Design = () => {
               <div className="flex  mt-5">
                 <p
                   onClick={handleButtonClick}
-                  className="explore_btn p-5 text-white smaller-head-text cursor-pointer "
+                  className="explore_button p-5 text-white smaller-head-text cursor-pointer "
                 >
                   Explore
                   <HiOutlineArrowSmRight className="text-white inline-block mr-1" />

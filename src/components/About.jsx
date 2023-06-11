@@ -71,8 +71,7 @@ const About = () => {
                 <p className="text_grey font-semibold animate__animated animate__fadeInLeft text-xs py-2 opacity-50 ">
                   We strive to make our clients the leaders by choosing the
                   right brand that fits the company’s image. Our priority is to
-                  ensure you get recognized through Graphic Design, Print Media
-                  and Web Design, to ensure long term satisfaction.
+                  ensure you get recognized to ensure long term satisfaction.
                 </p>
               </div>
             </div>

@@ -60,16 +60,16 @@ h6 {
   color: rgb(255, 196, 196);
 }
 /* rgb(133, 113, 0) */
-.explore_btn {
-  background-color: rgb(129, 5, 5);
-  box-shadow: 1px 2px 30px rgba(133, 113, 0, 0.363);
+.explore_button {
+  background-color: rgb(202, 3, 3);
+  box-shadow: 1px 2px 30px rgba(133, 0, 0, 0.363);
   transition: background-color 0.3s, box-shadow 0.7s;
   border-radius: 20px;
 }
-.explore_btn:hover {
+.explore_button:hover {
   transform: scale(1.2);
   transform-origin: center;
-  box-shadow: 1px 2px 200px rgb(133, 113, 0);
+  box-shadow: 1px 2px 200px rgb(255, 0, 0);
 }
 
 .inner_creative_div {
@@ -78,7 +78,7 @@ h6 {
   transition: transform 0.5s;
 }
 .creative_div {
-  background-image: url("../assets/3d_home.png");
+  /* background-image: url("../assets/3d_home.png"); */
   background-size: cover;
 }
 
