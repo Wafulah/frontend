@@ -120,13 +120,13 @@ const WebDesign = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full h-5/6 flex">
-              <div className="w-1/2 h-full ">
+            <div className=" w-full h-5/6 flex">
+              <div className=" sm:mx-auto sm:w-full w-1/2 h-full ">
                 <p
                   ref={refText}
                   className={`animate__animated ${
                     inViewText ? "animate__bounceIn" : ""
-                  } p-4 pt-10 text-white small-head-text`}
+                  } p-4 pt-10 text-white web-head-text`}
                 >
                   Handy{" "}
                 </p>
@@ -135,7 +135,7 @@ const WebDesign = () => {
                   ref={refText}
                   className={`animate__animated ${
                     inViewText ? "animate__fadeInRight" : ""
-                  } p-4 text-white small-head-text`}
+                  } p-4 text-white web-head-text`}
                 >
                   {" "}
                   Creations{" "}
@@ -145,7 +145,7 @@ const WebDesign = () => {
                   ref={refText}
                   className={`animate__animated ${
                     inViewText ? "animate__bounceIn" : ""
-                  } p-4 text-white small-head-text`}
+                  } p-4 text-white web-subhead-text`}
                 >
                   Web Solutions
                 </p>
@@ -153,25 +153,25 @@ const WebDesign = () => {
                   ref={ref}
                   className={`animate__animated ${
                     inViewText ? "animate__slideInUp" : ""
-                  } p-4 pt-6 text-white text-sm`}
+                  } sm:text-base 2xl:text-xl p-4 pt-6 text-white text-sm`}
                 >
                   Unlock the potential of your online presence with our
                   cutting-edge web solutions. From captivating designs to
                   seamless functionality, we empower your business to thrive in
                   the digital landscape.
                 </p>
-                <div className="flex m-4  mt-5">
+                <div className=" flex m-4  mt-5">
                   <p
                     //   onClick={handleButtonClick}
-                    className="web_explore_btn p-4 p-5 text-white smaller-head-text cursor-pointer "
+                    className="sm:p-3 sm:py-5 web_explore_btn p-4 p-5 text-white web-subhead-text cursor-pointer "
                   >
                     Explore
                     <HiOutlineArrowSmRight className="text-white inline-block mr-1" />
                   </p>
                 </div>
               </div>
-              <div className="w-1/2 h-full flex justify-center items-center ">
-                <div className="comp w-11/12 h-3/4 ">
+              <div className="sm:w-0 sm:flex-shrink-1 hide w-1/2 h-full flex justify-center items-center ">
+                <div className="hide comp w-11/12 h-3/4 ">
                   {/* <img src={CompImage} alt="Web Development" className="bg-cover w-full h-full" /> */}
                 </div>
               </div>
@@ -179,24 +179,22 @@ const WebDesign = () => {
           </div>
         </div>
       </div>
-      <div className="web_body">
+      <div className=" web_body">
         <div className="web_services w-full ">
-          <div className="h-1/5 w-full ">
+          <div className="sm:h-1/6  h-1/5 w-full ">
             <div className="w-full h-1/3 ">
               <h2 className="p-5  pt-6 text-white smaller-head-text">
                 <span className="text_underline">Services </span> We Offer
               </h2>
             </div>
             <div className="h-2/3 w-full ">
-              <div className="w-1/2 h-full">
-              <p
-        ref={refSrvText}
-        className={`animate__animated ${
-          inViewSrvText ? "animate__fadeInLeft" : ""
-        }  text-white text-white pt-2 p-5`}
-      >
-
-                
+              <div className="sm:w-full sm:mt-9 w-1/2 h-full">
+                <p
+                  ref={refSrvText}
+                  className={`animate__animated ${
+                    inViewSrvText ? "animate__fadeInLeft" : ""
+                  } 2xl:pt-10 2xl:text-lg text-white text-white pt-2 p-5`}
+                >
                   {" "}
                   Our comprehensive suite of services ensures your online
                   presence is a true reflection of your brand's uniqueness and
@@ -205,20 +203,20 @@ const WebDesign = () => {
               </div>
             </div>
           </div>
-          <div className="h-3/4 w-full " ref={ref}>
+          <div className="sm:5/6 2xl:mt-16 2xl:h-5/6 h-3/4 w-full " ref={ref}>
             <motion.div
-              className="w-full h-1/2 flex justify-between"
+              className="sm:block w-full h-1/2 flex justify-between"
               variants={innerTopADivVariants}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
             >
               <div className="web_info_div flex justify-center items-center">
-                <div className="mx-auto h-5/6 w-5/6 ">
-                  <FaLaptopCode className="text-6xl text-white" />
-                  <p className="text-white text-3xl pt-3 text-bold ">
+                <div className="sm:h-full sm:m-3  mx-auto h-5/6 w-5/6 ">
+                  <FaLaptopCode className="2xl:text-8xl text-6xl text-white" />
+                  <p className="sm:text-2xl text-white text-3xl pt-3 text-bold ">
                     Web Design
                   </p>
-                  <p className="text-white pt-3 text-sm">
+                  <p className="2xl:text-xl text-white pt-3 text-sm">
                     Elevate your online presence with our expert web design
                     services, tailored to captivate your audience and drive
                     meaningful engagement. Let our creative designs breathe life
@@ -228,11 +226,11 @@ const WebDesign = () => {
               </div>
               <div className="web_info_div  flex justify-center items-center">
                 <div className="mx-auto h-5/6 w-5/6 ">
-                  <TbWorldWww className="text-6xl text-white" />
-                  <p className="text-white text-2xl pt-3 text-bold ">
+                  <TbWorldWww className="2xl:text-8xl text-6xl text-white" />
+                  <p className="sm:text-2xl text-white text-2xl pt-3 text-bold ">
                     Domain Registration
                   </p>
-                  <p className="text-white pt-3 text-sm">
+                  <p className="2xl:text-xl text-white pt-3 text-sm">
                     Secure your online presence with our seamless domain
                     registration services. Claim your unique domain name today
                     and establish your digital identity with confidence.
@@ -241,11 +239,11 @@ const WebDesign = () => {
               </div>
               <div className="web_info_div  flex justify-center items-center">
                 <div className="mx-auto h-5/6 w-5/6 ">
-                  <FaServer className="text-6xl text-white" />
-                  <p className="text-white text-3xl pt-3 text-bold ">
+                  <FaServer className="2xl:text-8xl text-6xl text-white" />
+                  <p className="sm:text-2xl text-white text-3xl pt-3 text-bold ">
                     Web Hosting
                   </p>
-                  <p className="text-white pt-3 text-sm">
+                  <p className="2xl:text-xl text-white pt-3 text-sm">
                     Experience reliable and high-performance web hosting
                     solutions tailored to your needs. Elevate your website's
                     performance and ensure optimal uptime with our top-notch
@@ -255,18 +253,18 @@ const WebDesign = () => {
               </div>
             </motion.div>
             <motion.div
-              className="w-full h-1/2 flex justify-between"
+              className="sm:block  w-full h-1/2 flex justify-between"
               variants={innerTopBDivVariants}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
             >
-              <div className="web_info_div  flex justify-center items-center">
+              <div className="sm:mt-10 web_info_div  flex justify-center items-center">
                 <div className="mx-auto h-5/6 w-5/6 ">
-                  <TiSocialInstagram className="text-6xl text-white" />
-                  <p className="text-white text-3xl pt-3 text-bold ">
+                  <TiSocialInstagram className="2xl:text-8xl text-6xl text-white" />
+                  <p className="sm:text-2xl 2xl:pt-2 text-white text-3xl pt-3 text-bold ">
                     Social Media
                   </p>
-                  <p className="text-white pt-3 text-sm">
+                  <p className="2xl:text-xl text-white pt-3 text-sm">
                     Unlock the power of social media to propel your business
                     forward. Our expert social media strategies will elevate
                     your brand, engage your audience, and drive conversions,
@@ -277,11 +275,11 @@ const WebDesign = () => {
               </div>
               <div className="web_info_div  flex justify-center items-center">
                 <div className="mx-auto h-5/6 w-5/6 ">
-                  <MdAppShortcut className="text-6xl text-white" />
-                  <p className="text-white text-3xl pt-3 text-bold ">
+                  <MdAppShortcut className="2xl:text-8xl text-6xl text-white" />
+                  <p className="sm:text-2xl text-white text-3xl pt-3 text-bold ">
                     Web Development
                   </p>
-                  <p className="text-white pt-3 text-sm">
+                  <p className="2xl:text-xl text-white pt-3 text-sm">
                     Experience the limitless possibilities of web development
                     with our skilled team. From custom web applications to
                     seamless e-commerce solutions, we transform your vision into
@@ -292,11 +290,11 @@ const WebDesign = () => {
               </div>
               <div className="web_info_div  flex justify-center items-center">
                 <div className="mx-auto h-5/6 w-5/6 ">
-                  <GiPodiumWinner className="text-6xl text-white" />
-                  <p className="text-white text-3xl pt-3 text-bold ">
+                  <GiPodiumWinner className="2xl:text-8xl text-6xl text-white" />
+                  <p className="sm:text-2xl text-white text-3xl pt-3 text-bold ">
                     Digital Strategies
                   </p>
-                  <p className="text-white pt-3 text-sm">
+                  <p className="2xl:text-xl text-white pt-3 text-sm">
                     Supercharge your online presence with our winning digital
                     strategies. From optimization to innovation, we'll propel
                     your business to new heights in the digital realm. Drive
@@ -308,10 +306,12 @@ const WebDesign = () => {
             </motion.div>
           </div>
         </div>
-        <div className="h-20 w-full"></div>
-        <div className="web_about mb-5 w-full flex">
-          <div className="w-3/5 h-full abt_comp"></div>
-          <div className="w-2/5 h-4/5">
+        <div className="2xl:mt-32 h-20 w-full"></div>
+        <div className=" web_about mb-5 w-full flex ">
+          <div className="hide sm:w-0 sm:flex-shrink-1  2xl:w-2/5 w-3/5 h-full flex items-end">
+            <div className="hide sm:flex-shrink-1 2xl:h-3/4 w-full h-full flex items-end abt_comp "></div>
+          </div>
+          <div className=" sm:h-full sm:w-full sm:w-11/12 2xl:w-3/5 w-2/5 h-4/5">
             <h2 className=" pt-6 text-white smaller-head-text">
               Why You should Work With
             </h2>
@@ -319,23 +319,24 @@ const WebDesign = () => {
             <h2 className=" pt-3 text-white smaller-head-text">
               <span className="text_underline"> Us </span>
             </h2>
-            <p
-             
-              className="pt-5 text-white text-sm opacity-75"
-            >
+            <p className="sm:text-lg 2xl:text-lg pt-5 text-white text-sm opacity-75">
               Choose us for your web design and development needs. We are
               dedicated to delivering exceptional results, bringing creativity
               and expertise to every project. Let us be your trusted partner for
               success.
             </p>
-            <div className="h-3/4 w-full">
-              <div className="mt-2 h-1/3 w-full flex justify-between ">
-                <div className="h-full w-1/5 ">
-                  <p className="text-purple-500 text-6xl text-bold">01.</p>
+            <div className="sm:mt-16 h-3/4 w-full">
+              <div className=" sm:h-1/5 mt-2 h-1/3 w-full flex justify-between ">
+                <div className=" h-full w-1/5 ">
+                  <p className="sm:text-5xl 2xl:text-8xl text-purple-500 text-6xl text-bold">
+                    01.
+                  </p>
                 </div>
                 <div className="w-3/4 h-full">
-                  <p className="text-white text-bold text-lg">Experience</p>
-                  <p className="text-white opacity-75 pt-1 text-xs">
+                  <p className="sm:text-2xl 2xl:text-2xl text-white text-bold text-lg">
+                    Experience
+                  </p>
+                  <p className="sm:text-base 2xl:text-lg text-white opacity-75 pt-1 text-xs">
                     With over a decade of industry experience, we have honed our
                     skills and expertise to deliver outstanding web design and
                     development solutions tailored to your specific
@@ -343,15 +344,17 @@ const WebDesign = () => {
                   </p>
                 </div>
               </div>
-              <div className="mt-2 h-1/3 w-full flex justify-between">
+              <div className="2xl:mt-8 mt-2 h-1/3 w-full flex justify-between">
                 <div className="h-full w-1/5 ">
-                  <p className="text-purple-500 text-6xl text-bold">02.</p>
+                  <p className="sm:text-5xl 2xl:text-8xl text-purple-500 text-6xl text-bold">
+                    02.
+                  </p>
                 </div>
                 <div className="w-3/4 h-full">
-                  <p className="text-white text-bold text-lg">
+                  <p className="sm:text-2xl 2xl:text-2xl text-white text-bold text-lg">
                     Design Centric Approach
                   </p>
-                  <p className="text-white opacity-75 pt-1 text-xs">
+                  <p className="sm:text-base 2xl:text-lg text-white opacity-75 pt-1 text-xs">
                     As a design-centric company, we prioritize creating visually
                     stunning websites that not only captivate your audience but
                     also reflect your brand's unique identity. Our focus on
@@ -361,15 +364,17 @@ const WebDesign = () => {
                 </div>
               </div>
 
-              <div className="mt-2 h-1/3 w-full flex justify-between ">
+              <div className=" 2xl:mt-8  mt-2 h-1/3 w-full flex justify-between ">
                 <div className="h-full w-1/5 ">
-                  <p className="text-purple-500 text-6xl text-bold">03.</p>
+                  <p className=" sm:text-5xl 2xl:text-8xl text-purple-500 text-6xl text-bold">
+                    03.
+                  </p>
                 </div>
                 <div className="w-3/4 h-full">
-                  <p className="text-white text-bold text-lg">
+                  <p className="sm:text-2xl 2xl:text-2xl  text-white text-bold text-lg">
                     Guaranteed Satisfaction
                   </p>
-                  <p className="text-white opacity-75 pt-1 text-xs">
+                  <p className="sm:text-base 2xl:text-lg text-white opacity-75 pt-1 text-xs">
                     Our team takes the time to understand your business
                     objectives and tailor our solutions to meet your specific
                     needs. We strive to exceed your expectations by delivering
@@ -382,58 +387,79 @@ const WebDesign = () => {
           </div>
         </div>
         <div className="h-32 w-full"></div>
-        <div className="mt-10 web_projects flex justify-between mb-10">
+        <div className="sm:block sm:mx-auto  mt-10 web_projects flex justify-between mb-10">
+          <div className="sm:h-1/2 sm:mx-auto sm:w-11/12 h-full w-1/2 flex justify-between">
           <div className="web_project_div ">
             <div className="flex justify-center h-1/3 w-full items-center">
-              <AiOutlineFundProjectionScreen className="pt-3 text-bold text-white text-7xl" />
+              <AiOutlineFundProjectionScreen className="2xl:text-9xl pt-3 text-bold text-white text-7xl" />
             </div>
             <div className="flex justify-center h-1/3 w-full items-center">
-              <p className="pt-3 text-white text-bold text-5xl">5000+</p>
+              <p className="2xl:text-7xl pt-3 text-white text-bold text-5xl">
+                5000+
+              </p>
             </div>
             <div className="flex justify-center h-1/3 w-full items-center">
-              <p className="text-bold text-white text-54xl">Projects done</p>
+              <p className="2xl:text-2xl text-bold text-white text-54xl">
+                Projects done
+              </p>
             </div>
           </div>
           <div className="web_project_div">
             <div className="flex justify-center h-1/3 w-full items-center">
-              <MdGroups className="pt-3 text-bold text-white text-7xl" />
+              <MdGroups className="2xl:text-9xl pt-3 text-bold text-white text-7xl" />
             </div>
             <div className="flex justify-center h-1/3 w-full items-center">
-              <p className="pt-3 text-white text-bold text-5xl">20+</p>
+              <p className="2xl:text-7xl pt-3 text-white text-bold text-5xl">
+                20+
+              </p>
             </div>
             <div className="flex justify-center h-1/3 w-full items-center">
-              <p className="text-bold text-white text-54xl">Developers</p>
+              <p className="2xl:text-2xl text-bold text-white text-54xl">
+                Developers
+              </p>
+            </div>
+          </div> 
+          </div>
+          <div className="sm:h-1/2 sm:mx-auto sm:w-4/5 h-full w-1/2 flex justify-between">
+          <div className="web_project_div">
+            <div className="flex justify-center h-1/3 w-full items-center">
+              <FaRegHandshake className="2xl:text-9xl pt-3 text-bold text-white text-7xl" />
+            </div>
+            <div className="flex justify-center h-1/3 w-full items-center">
+              <p className="2xl:text-7xl pt-3 text-white text-bold text-5xl">
+                30+
+              </p>
+            </div>
+            <div className="flex justify-center h-1/3 w-full items-center">
+              <p className="2xl:text-2xl text-bold text-white text-54xl">
+                Happy Clients
+              </p>
             </div>
           </div>
           <div className="web_project_div">
             <div className="flex justify-center h-1/3 w-full items-center">
-              <FaRegHandshake className="pt-3 text-bold text-white text-7xl" />
+              <FaUserClock className="2xl:text-9xl pt-3 text-bold text-white text-7xl" />
             </div>
             <div className="flex justify-center h-1/3 w-full items-center">
-              <p className="pt-3 text-white text-bold text-5xl">30+</p>
+              <p className="2xl:text-7xl pt-3 text-white text-bold text-5xl">
+                10+
+              </p>
             </div>
             <div className="flex justify-center h-1/3 w-full items-center">
-              <p className="text-bold text-white text-54xl">Happy Clients</p>
+              <p className="2xl:text-2xl text-bold text-white text-54xl">
+                Years
+              </p>
             </div>
           </div>
-          <div className="web_project_div">
-            <div className="flex justify-center h-1/3 w-full items-center">
-              <FaUserClock className="pt-3 text-bold text-white text-7xl" />
-            </div>
-            <div className="flex justify-center h-1/3 w-full items-center">
-              <p className="pt-3 text-white text-bold text-5xl">10+</p>
-            </div>
-            <div className="flex justify-center h-1/3 w-full items-center">
-              <p className="text-bold text-white text-54xl">Years</p>
-            </div>
           </div>
         </div>
         <div className="h-32 w-full"></div>
 
-        <div id="contact">
+        
+      </div>
+      <div id="contact" className="w-11/12 mx-auto" >
           <Contact />
         </div>
-      </div>
     </div>
   );
 };

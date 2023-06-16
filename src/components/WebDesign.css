@@ -39,6 +39,7 @@
   width: 80%;
   /* height: 100%; */
   margin: auto;
+  /* background-color: blue; */
 }
 .web_services {
   height: 900px;
@@ -82,7 +83,7 @@
   width: 100%;
 }
 .web_project_div {
-  width: 23%;
+  width: 43%;
   height: 95%;
   background: rgba(245, 141, 141, 0.096);
   box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07);
@@ -108,4 +109,73 @@ h6 {
   font-family: "Futura", Arial, sans-serif;
   letter-spacing: 1px; /* Increase the letter spacing */
   line-height: 1.5; /* Increase the line height */
+}
+
+@media (min-width: 1580px){
+  .web_services {
+    height: 1200px;
+    /* background-color: bisque; */
+  }
+  .web_about {
+    height: 850px;
+  }
+  .abt_comp {
+    background-image: url("../assets/abt_comp.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .web_projects {
+    height: 470px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .web_design_glassmorphism {
+    background: rgba(245, 141, 141, 0.247);
+    box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(224, 1, 1, 0.884);
+    border-radius: 20px;
+    width: 94%;
+    height: 90%;
+  }  
+  .web_body {
+    width:90%;
+  }
+  .web_services {
+    height: 2900px;
+    /* background-color: green; */
+  }
+  .web_info_div {
+    width: 90%;
+    height: 33%;
+    background: rgba(245, 141, 141, 0.096);
+    box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(224, 1, 1, 0.884);
+    border-radius: 10px;
+    margin:5% auto;
+  }
+  .web_about {
+    height: 1590px;
+  }
+  .web_projects {
+    height: 570px;
+    width: 100%;
+  }
+  .web_project_div {
+    width: 50%;
+    height: 95%;
+    background: rgba(245, 141, 141, 0.096);
+    box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(224, 1, 1, 0.884);
+    border-radius: 0 0 10px 10px;
+    border-width: 10px 1px 1px 1px;
+  }
+   
 }

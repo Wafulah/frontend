@@ -6,12 +6,6 @@ import ObImage from "../assets/objective.svg";
 
 import "animate.css";
 
-// import BritamImage from "../assets/britam.png";
-// import DahabImage from "../assets/dahabshiil.png";
-// import GuardImage from "../assets/cigna.png";
-// import TiImage from "../assets/Ti.png";
-// import BusinessImage from "../assets/bussiness_times.png";
-
 const About = () => {
   return (
     <div className="  curved_div ">
@@ -20,19 +14,21 @@ const About = () => {
           <p className="text-4xl pt-1 text_grey font-bold "></p>
         </div>
 
-        <div className="w-3/4 h-full mx-auto ">
-          <div className="mt-14 h-full flex justify-between">
+        <div className="w-4/5 h-full mx-auto ">
+          <div className="sm:block mt-14 h-full flex justify-between">
             <div className=" about_info_div ">
-              <div className="h-2/4 w-3/4 mt-5 mx-auto ">
+              <div className="2xl:h-3/5 2xl:w-4/5 h-2/4 w-3/4 mt-5 mx-auto ">
                 <img
                   src={MsImage}
                   className="h-full w-full bg-contain"
                   alt="mission"
                 />
               </div>
-              <div className=" w-3/4 mx-auto ">
-                <h3 className="text-black opacity-75 font-bold">Mission</h3>
-                <p className="text_grey font-semibold animate__animated animate__fadeInLeft text-xs py-2 opacity-50 ">
+              <div className=" w-4/5 mx-auto ">
+                <h3 className="2xl:text-2xl text-black opacity-75 font-bold">
+                  Mission
+                </h3>
+                <p className="2xl:text-lg 2xl:py-0 text_grey font-semibold animate__animated animate__fadeInLeft text-xs py-2 opacity-50 ">
                   To meet all of the personal, small businesses and commercial
                   branding needs of our customers in the most affordable manner
                   while maintaining the highest degree of quality work in a
@@ -41,7 +37,7 @@ const About = () => {
               </div>
             </div>
             <div className="about_info_div ">
-              <div className="h-2/4 w-3/4 mt-5 mx-auto ">
+              <div className="2xl:h-3/5 2xl:w-4/5 h-2/4 w-3/4 mt-5 mx-auto ">
                 <img
                   src={VsImage}
                   className="h-full w-full bg-contain"
@@ -49,8 +45,10 @@ const About = () => {
                 />
               </div>
               <div className=" w-3/4 mx-auto ">
-                <h3 className="text-black opacity-75 font-bold">Vision</h3>
-                <p className="text_grey font-semibold animate__animated animate__fadeInLeft text-xs py-2 opacity-50 ">
+                <h3 className="2xl:text-2xl text-black opacity-75 font-bold">
+                  Vision
+                </h3>
+                <p className="2xl:text-lg 2xl:py-0 text_grey font-semibold animate__animated animate__fadeInLeft text-xs py-2 opacity-50 ">
                   The market will be increasingly more reliant on printed
                   material and web design for marketing and advertising. Handy
                   creations will be the most sort after provider for these
@@ -59,7 +57,7 @@ const About = () => {
               </div>
             </div>
             <div className="about_info_div ">
-              <div className="h-2/4 w-3/4 mt-5 mx-auto ">
+              <div className="2xl:h-3/5 2xl:w-4/5 h-2/4 w-3/4 w-3/4 mt-5 mx-auto ">
                 <img
                   src={ObImage}
                   className="h-full w-full bg-contain"
@@ -67,8 +65,10 @@ const About = () => {
                 />
               </div>
               <div className=" w-3/4 mx-auto ">
-                <h3 className="text-black opacity-75 font-bold">Objectives</h3>
-                <p className="text_grey font-semibold animate__animated animate__fadeInLeft text-xs py-2 opacity-50 ">
+                <h3 className="2xl:text-2xl text-black opacity-75 font-bold">
+                  Objectives
+                </h3>
+                <p className="2xl:text-lg 2xl:py-0 text_grey font-semibold animate__animated animate__fadeInLeft text-xs py-2 opacity-50 ">
                   We strive to make our clients the leaders by choosing the
                   right brand that fits the company’s image. Our priority is to
                   ensure you get recognized to ensure long term satisfaction.

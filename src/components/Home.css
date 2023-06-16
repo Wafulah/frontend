@@ -23,7 +23,6 @@
   width: 80vw;
   height: 100vh;
   margin: auto;
-  
 }
 
 .float_right {
@@ -68,7 +67,7 @@
   width: 23%;
   height: 100%;
   border-radius: 10px;
-  
+
   /* background-color: rgb(255, 238, 238); */
   /* box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.548); */
   /* justify-content: center;
@@ -77,4 +76,81 @@
 .scrollable_div {
   width: 100%;
   overflow: auto;
+}
+
+/* CODE for large computers */
+@media (min-width: 1580px) {
+  .navi {
+    height: 150px;
+    display: flex;
+    /* background-color: blue; */
+  }
+
+  .name {
+    text-align: left;
+    float: left;
+  }
+
+  .home {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: rgba(12, 1, 1, 0.122);
+    backdrop-filter: blur(200px);
+  }
+
+  .home::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+
+  .holder {
+    width: 80vw;
+    height: 100vh;
+    margin: auto;
+  }
+
+  .float_right {
+    float: right;
+  }
+
+  .child {
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* background-color: blue; */
+    height: 70vh;
+    width: 40%;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .logo_image {
+    width: 20%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .logos_div {
+    width: 23%;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .scrollable_div {
+    width: 100%;
+    overflow: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .hide {
+    visibility: hidden;
+  }
+  
 }

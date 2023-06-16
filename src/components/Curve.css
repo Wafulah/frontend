@@ -1,8 +1,37 @@
 .curv_div {
     border-top-right-radius: 50%;
     /* border-top-left-radius: 70%; */
-    height: 150px;
+    height: 190px;
     background-color: rgb(255, 238, 238);
     margin-top: 4%;
     
 }
+.text-cent {
+  text-align: center;
+}
+@media (min-width: 1580px) {
+    .curv_div {
+      border-top-right-radius: 50%;
+      /* border-top-left-radius: 70%; */
+      height: 230px;
+      background-color: rgb(255, 238, 238);
+      margin-top: 4%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hide {
+      visibility: hidden;
+    } 
+    .curv_div {
+      border-top-right-radius: 50%;
+      /* border-top-left-radius: 70%; */
+      height: 300px;
+      background-color: rgb(255, 238, 238);
+      margin-top: 4%;
+      
+  }
+  .text-cent {
+    text-align: justify;
+  }
+  }  

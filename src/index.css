@@ -8,21 +8,108 @@
 html {
   font-family: "Inter", sans-serif;
 }
-.head-text {
+/* .head-text {
   @apply xl:text-[7rem] text-[3rem] xl:leading-[8rem] leading-[4rem] font-black text-white;
+} */
+@layer components {
+  .head-text {
+    @apply xl:text-[7rem] text-[3rem] xl:leading-[8rem] leading-[4rem] font-black text-white;
+
+  }
+  .dhead-text {
+    @apply xl:text-[7rem] text-[3rem] xl:leading-[8rem] leading-[4rem] font-black text-white;
+
+  }
+  .small-head-text {
+    @apply xl:text-[4rem] text-[4rem] xl:leading-[1rem] leading-[3rem] font-medium;
+  }
+  .web-head-text {
+    @apply xl:text-[4rem] text-[4rem] xl:leading-[1rem] leading-[3rem] font-medium;
+  }
+  .web-subhead-text {
+    @apply xl:text-[4rem] text-[4rem] xl:leading-[1rem] leading-[3rem] font-medium;
+  }
+  .smaller-head-text {
+    @apply xl:text-[2rem] text-[2rem] xl:leading-[1rem] leading-[2rem] font-medium text-white;
+  }
+  .smaller-inthead-text {
+    @apply xl:text-[2rem] text-[2rem] xl:leading-[1rem] leading-[2rem] font-medium text-white;
+  }
+  .interior-head-text {
+    @apply xl:text-[7rem] text-[3rem] xl:leading-[8rem] leading-[4rem] font-black text-white;
+    background: linear-gradient(to right, rgb(6, 0, 27) 10%, rgb(252, 249, 249) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
-.small-head-text {
-  @apply xl:text-[4rem] text-[4rem] xl:leading-[1rem] leading-[3rem] font-medium;
+
+@layer utilities {
+  @screen 2xl {
+    .head-text {
+      @apply xl:text-[8rem] text-[4rem] xl:leading-[8rem] leading-[7rem] font-black text-white;
+    }
+    .dhead-text {
+      @apply xl:text-[8rem] text-[4rem] xl:leading-[8rem] leading-[7rem] font-black text-white;
+    }
+    .small-head-text {
+      @apply xl:text-[4rem] text-[4rem] xl:leading-[2rem] leading-[3rem] font-black;
+    } 
+    .web-head-text {
+      @apply xl:text-[4rem] text-[4rem] xl:leading-[2rem] leading-[3rem] font-black;
+    }
+    .web-subhead-text {
+      @apply xl:text-[4rem] text-[4rem] xl:leading-[2rem] leading-[3rem] font-black;
+    }
+    .smaller-head-text {
+      @apply xl:text-[4rem] text-[3rem] xl:leading-[3rem] leading-[3rem] font-medium text-white;
+    }
+    .smaller-inthead-text {
+      @apply xl:text-[4rem] text-[3rem] xl:leading-[3rem] leading-[3rem] font-medium text-white;
+    }
+    .interior-head-text {
+      @apply xl:text-[10rem] text-[7rem] xl:leading-[8rem] leading-[9rem] font-black text-white;
+      background: linear-gradient(to right, rgb(6, 0, 27) 40%, rgb(252, 249, 249) 70%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+   
+  }
 }
-.smaller-head-text {
-  @apply xl:text-[2rem] text-[2rem] xl:leading-[1rem] leading-[2rem] font-medium text-white;
+
+@layer utilities {
+  @screen sm {
+    .head-text {
+      @apply xl:text-[5rem] text-[5rem] xl:leading-[6rem] leading-[5rem] font-black text-white;
+    }
+    .dhead-text {
+      @apply xl:text-[4rem] text-[4rem] xl:leading-[6rem] leading-[5rem] font-black text-white;
+    }
+    .small-head-text {
+      @apply xl:text-[4rem] text-[4rem] xl:leading-[2rem] leading-[3rem] font-black;
+    } 
+    .web-head-text {
+      @apply xl:text-[3rem] text-[3rem] xl:leading-[1rem] leading-[1rem] font-black;
+    }
+    .web-subhead-text {
+      @apply xl:text-[2rem] text-[2rem] xl:leading-[1rem] leading-[1rem] font-bold;
+    }
+    
+    .smaller-head-text {
+      @apply xl:text-[3rem] text-[3rem] xl:leading-[3rem] leading-[4rem] font-medium text-white;
+    }
+    .smaller-inthead-text {
+      @apply xl:text-[2rem] text-[2rem] xl:leading-[3rem] leading-[4rem] font-bold text-white;
+    }
+    .interior-head-text {
+      @apply xl:text-[5rem] text-[3rem] xl:leading-[4rem] leading-[4rem] font-black text-white;
+      background: linear-gradient(to right, rgb(6, 0, 27) 30%, rgb(252, 249, 249) 50%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+   
+  }
 }
-.interior-head-text {
-  @apply xl:text-[7rem] text-[3rem] xl:leading-[8rem] leading-[4rem] font-black text-white;
-  background: linear-gradient(to right, rgb(6, 0, 27) 10%, rgb(252, 249, 249) 50%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 .glassmorphism {
   background: rgba(248, 172, 172, 0.25);
   box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07);

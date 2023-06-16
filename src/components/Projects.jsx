@@ -19,17 +19,26 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/backend/api/homes/")
+    fetch("https://handycreations.co.ke/api/homes/")
       .then((response) => response.json())
       .then((data) => setProjects(data))
       .catch((error) => console.error(error));
   }, []);
 
+  // useEffect(() => {
+  //   fetch("http://localhost:8000/backend/api/homes/")
+  //     .then((response) => response.json())
+  //     .then((data) => setProjects(data))
+  //     .catch((error) => console.error(error));
+  // }, []);
+
   return (
     <div className="project">
       <div className="h-full holder">
         <div className=" flex justify-left">
-          <p className="text-4xl text_grey font-bold ">View Our Projects</p>
+          <p className="sm:text-3xl 2xl:text-6xl text-4xl text_grey font-bold ">
+            View Our Projects
+          </p>
         </div>
         <Swiper
           className="scroll_div w-auto flex overflow-x-auto mt-10 justify-between"
@@ -43,24 +52,27 @@ const Projects = () => {
           {projects.map((project) => (
             <SwiperSlide
               key={project.id}
-              className="flex-shrink-0  pic_div w-1/4   m-2"
+              className="sm:w-72 flex-shrink-0  pic_div 1/4   m-2"
             >
               <div className="inner_pic_div">
                 <img
                   src={project.pic}
                   alt={project.name}
-                  className="h-full w-full object-cover rounded-lg"
+                  className="flex-shrink-0 h-full w-full object-cover rounded-lg"
                 />
               </div>
               <div className="flex justify-between">
                 <div>
-                  <p className="text-black opacity-75 font-semibold text-sm pt-2.5 px-2">
+                  <p className="2xl:text-xl text-black opacity-75 font-semibold text-sm pt-2.5 px-2">
                     {project.name}
                   </p>
-                  <p className="text-black opacity-25 px-2 text-xs">
-                  {project.tag.map((tags) => (
-                    <span className="pr-5" key={tags.id}> {tags.name}</span>
-                  ))}
+                  <p className="2xl:text-lg text-black opacity-25 px-2 text-xs">
+                    {project.tag.map((tags) => (
+                      <span className="pr-5" key={tags.id}>
+                        {" "}
+                        {tags.name}
+                      </span>
+                    ))}
                   </p>
                 </div>
                 <div>

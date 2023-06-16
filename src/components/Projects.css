@@ -1,6 +1,6 @@
 .pic_div {
   height: 80%;
-  
+
   scroll-snap-align: start;
 
   /* background-color: blue; */
@@ -15,7 +15,6 @@
   scroll-behavior: smooth;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
-  
 }
 .scroll_div::-webkit-scrollbar {
   display: none;
@@ -51,11 +50,76 @@
 }
 .project {
   background-color: rgb(255, 238, 238);
-  
+
   height: 560px;
-  
-  
-  
-  
 }
 
+@media (min-width: 1580px) {
+  .pic_div {
+    height: 80%;
+
+    /* scroll-snap-align: start; */
+    width: 100px;
+
+    /* background-color: blue; */
+  }
+  .inner_pic_div {
+    height: 80%;
+  }
+
+  .scroll_div {
+    height: 85%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+  .scroll_div::-webkit-scrollbar {
+    display: none;
+  }
+  /* Styles for the next button */
+  .swiper-button-next {
+    background-color: rgba(
+      240,
+      254,
+      255,
+      0.651
+    ) !important; /* Set the background color */
+    color: #f03c06 !important; /* Set the text color */
+    border-radius: 50% !important;
+    width: 7% !important;
+    height: 15% !important;
+    border: 2px solid #270202b6 !important;
+  }
+
+  /* Styles for the previous button */
+  .swiper-button-prev {
+    background-color: rgba(
+      240,
+      254,
+      255,
+      0.651
+    ) !important; /* Set the background color */
+    color: #f03c06 !important; /* Set the text color */
+    border-radius: 50% !important;
+    width: 7% !important;
+    height: 15% !important;
+    border: 2px solid #270202b6 !important;
+  }
+  .project {
+    background-color: rgb(255, 238, 238);
+
+    height: 800px;
+  }
+}
+
+@media (max-width: 640px) {
+  .pic_div {
+    height: 80%;
+
+    /* scroll-snap-align: start; */
+    width: 70vw !important;
+
+    /* background-color: blue; */
+  }
+}

@@ -37,18 +37,17 @@ import "animate.css";
 const Overlay = ({ visible, onClose }) => {
   const [designs, setDesigns] = useState([]);
 
+  // useEffect(() => {
+  //   fetch("https://handycreations.co.ke/api/designs/")
+  //     .then((response) => response.json())
+  //     .then((data) => setDesigns(data))
+  //     .catch((error) => console.error("Error fetching designs:", error));
+  // }, []);
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("http://localhost:8000/backend/api/designs/");
-        const data = await response.json();
-        setDesigns(data);
-      } catch (error) {
-        console.error("Error fetching designs:", error);
-      }
-    };
-
-    fetchData();
+    fetch("http://localhost:8000/backend/api/designs/")
+      .then((response) => response.json())
+      .then((data) => setDesigns(data))
+      .catch((error) => console.error("Error fetching designs:", error));
   }, []);
   const handleCloseClick = () => {
     onClose();
@@ -329,18 +328,20 @@ const Overlay = ({ visible, onClose }) => {
             pagination={{ clickable: true }}
             autoplay={{ delay: 900, disableOnInteraction: false }}
           >
-          {designs.map((design) => (
-            <SwiperSlide key={design.id} className="flex-shrink-0 pic_div w-1/4 m-2">
-              <div className="inner_pic_div">
-                <img
-                  src={design.pic}
-                  alt="Background Image"
-                  className="h-full w-full object-cover rounded-lg"
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-
+            {designs.map((design) => (
+              <SwiperSlide
+                key={design.id}
+                className="flex-shrink-0 pic_div w-1/4 m-2"
+              >
+                <div className="inner_pic_div">
+                  <img
+                    src={design.pic}
+                    alt="Background Image"
+                    className="h-full w-full object-cover rounded-lg"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
 
             {/* end of test divs  */}
           </Swiper>
@@ -434,29 +435,29 @@ const Design = () => {
               </p>
             </div>
           </nav>
-          <div className="design_body justify-between flex" ref={ref}>
+          <div className=" design_body justify-between flex" ref={ref}>
             <motion.div
-              className="creative_div w-1/2 h-5/6  flex justify-center items-center"
+              className="sm:w-0 sm:h-0 hide sm:flex-shrink-1 creative_div w-1/2 h-5/6  flex justify-center items-center"
               variants={innerLeftDivVariants}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
             >
-              <div className="h-full w-3/4 inner_creative_div"></div>
+              <div className="sm:w-0 sm:h-0 hide sm:flex-shrink-1 h-full w-3/4 inner_creative_div"></div>
             </motion.div>
-            <div className="  design_pic w-1/2 h-3/4 ">
-              <h3 className="animate__animated animate__rotateIn  flip-text transition duration-300 head-text ">
+            <div className="sm:w-11/12  design_pic w-1/2 h-3/4 ">
+              <h3 className="animate__animated animate__rotateIn  flip-text transition duration-300 dhead-text ">
                 Graphics
               </h3>
               <br />
               <br />
 
-              <h3 className="animate__animated animate__heartBeat flip-text text-2xl text-white small-head-text">
+              <h3 className=" animate__animated animate__heartBeat flip-text text-2xl text-white web-head-text">
                 Perfection
               </h3>
-              <p className="animate__animated animate__rollIn golden_text  pt-10 p-1 ">
+              <p className="sm:text-2xl animate__animated animate__rollIn golden_text  pt-10 p-1 ">
                 Proffesional Graphic Designers
               </p>
-              <p className="animate__animated animate__bounceInUp golden_text text-sm pt-5 pr-16 p-1">
+              <p className="sm:text-base sm:pr-5 animate__animated animate__bounceInUp golden_text text-sm pt-5 pr-16 p-1">
                 Indulge in the artistry of our professional graphic designers.
                 We craft captivating designs that evoke emotions and leave a
                 lasting impression. Discover a world where creativity knows no
@@ -465,7 +466,7 @@ const Design = () => {
               <div className="flex  mt-5">
                 <p
                   onClick={handleButtonClick}
-                  className="explore_button p-5 text-white smaller-head-text cursor-pointer "
+                  className="explore_button p-5 text-white web-subhead-text cursor-pointer "
                 >
                   Explore
                   <HiOutlineArrowSmRight className="text-white inline-block mr-1" />
